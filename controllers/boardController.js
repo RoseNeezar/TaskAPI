@@ -24,7 +24,7 @@ exports.getAllBoards = catchAsync(async (req, res, next) => {
       if (boards.length === 0) {
         const firstBoard = new Board({
           user: req.user._id,
-          title: "",
+          title: "First Board",
           listOrder: [],
         });
         return res.status(200).json({
